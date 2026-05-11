@@ -1,0 +1,14 @@
+mycobot_anchor:
+  frame_id: map
+  child_frame_id: mycobot_base_link
+  x: -2.9394
+  y: 4.1843
+  z: 0.80
+  roll: 0.0
+  pitch: 0.0
+  yaw: 0.0
+
+table:
+  length: 0.90
+  width: 0.70
+  height: 0.80
