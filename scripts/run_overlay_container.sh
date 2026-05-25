@@ -5,7 +5,23 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 IMAGE="${IMAGE:-turtlebot4:jazzy}"
 NAME="${OVERLAY_CONTAINER:-cobot_tb4_overlay}"
 JOINT_SOURCE="${1:-static}"
-MYCOBOT_DESCRIPTION_SRC="${MYCOBOT_DESCRIPTION_SRC:-/home/mhc/Germany/Cobot/mycobot_docker/custom_ws/src/mycobot_description}"
+
+default_mycobot_description_src() {
+  local candidate
+  for candidate in \
+    "${MYCOBOT_DESCRIPTION_SRC:-}" \
+    "${ROOT_DIR}/../cobot/mycobot_docker/custom_ws/src/mycobot_description" \
+    "${ROOT_DIR}/../Cobot/mycobot_docker/custom_ws/src/mycobot_description" \
+    "/home/mhc/Germany/Cobot/mycobot_docker/custom_ws/src/mycobot_description"; do
+    if [ -n "${candidate}" ] && [ -d "${candidate}" ]; then
+      printf '%s\n' "${candidate}"
+      return
+    fi
+  done
+  printf '%s\n' "/home/mhc/Germany/Cobot/mycobot_docker/custom_ws/src/mycobot_description"
+}
+
+MYCOBOT_DESCRIPTION_SRC="$(default_mycobot_description_src)"
 
 if [ "${JOINT_SOURCE}" != "static" ] && [ "${JOINT_SOURCE}" != "udp" ]; then
   echo "Uso: $0 [static|udp]"
@@ -15,7 +31,7 @@ fi
 if ! docker images --format '{{.Repository}}:{{.Tag}}' | grep -qx "${IMAGE}"; then
   echo "[!] Imagem ${IMAGE} nao encontrada."
   echo "    Build esperado:"
-  echo "    cd /home/mhc/Germany/turtlebot4_jazzy && docker build --no-cache -t turtlebot4:jazzy ."
+  echo "    cd ${ROOT_DIR}/../turtlebot4_jazzy && docker build --no-cache -t turtlebot4:jazzy ."
   exit 1
 fi
 

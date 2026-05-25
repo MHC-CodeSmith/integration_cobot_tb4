@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import math
+import os
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -11,8 +12,23 @@ from matplotlib.patches import Circle, Ellipse, Polygon, Rectangle
 from generate_3d_assets import parse_simple_yaml, read_pgm
 
 
-ROOT_DIR = Path("/home/mhc/Germany/cobot_tb4_integration")
-DEFAULT_MAP_YAML = Path("/home/mhc/Germany/turtlebot4_jazzy/maps/B002_map.yaml")
+ROOT_DIR = Path(__file__).resolve().parents[1]
+
+
+def default_map_yaml():
+    env_path = os.environ.get("B002_MAP_YAML")
+    candidates = [
+        Path(env_path) if env_path else None,
+        ROOT_DIR.parent / "turtlebot4_jazzy" / "maps" / "B002_map.yaml",
+        Path("/home/mhc/Germany/turtlebot4_jazzy/maps/B002_map.yaml"),
+    ]
+    for candidate in candidates:
+        if candidate and candidate.exists():
+            return candidate
+    return candidates[-1]
+
+
+DEFAULT_MAP_YAML = default_map_yaml()
 DEFAULT_FURNITURE_URDF = ROOT_DIR / "generated" / "room_furniture_3d.urdf"
 DEFAULT_OUT_PNG = ROOT_DIR / "generated" / "b002_scene_2d_overview.png"
 DEFAULT_OUT_MD = ROOT_DIR / "generated" / "b002_scene_2d_legend.md"

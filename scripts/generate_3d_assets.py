@@ -1,14 +1,29 @@
 #!/usr/bin/env python3
 import argparse
+import os
 from pathlib import Path
 
 import yaml
 
 
-ROOT_DIR = Path("/home/mhc/Germany/cobot_tb4_integration")
-MYCOBOT_DESCRIPTION_DIR = Path(
-    "/home/mhc/Germany/Cobot/mycobot_docker/custom_ws/src/mycobot_description"
-)
+ROOT_DIR = Path(__file__).resolve().parents[1]
+
+
+def default_mycobot_description_dir():
+    env_path = os.environ.get("MYCOBOT_DESCRIPTION_DIR")
+    candidates = [
+        Path(env_path) if env_path else None,
+        ROOT_DIR.parent / "cobot" / "mycobot_docker" / "custom_ws" / "src" / "mycobot_description",
+        ROOT_DIR.parent / "Cobot" / "mycobot_docker" / "custom_ws" / "src" / "mycobot_description",
+        Path("/home/mhc/Germany/Cobot/mycobot_docker/custom_ws/src/mycobot_description"),
+    ]
+    for candidate in candidates:
+        if candidate and candidate.exists():
+            return candidate
+    return candidates[-1]
+
+
+MYCOBOT_DESCRIPTION_DIR = default_mycobot_description_dir()
 MYCOBOT_XACRO = (
     MYCOBOT_DESCRIPTION_DIR / "urdf" / "mycobot_280_jn" / "mycobot_280_jn.urdf.xacro"
 )

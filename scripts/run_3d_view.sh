@@ -45,6 +45,20 @@ ros_env_for_child() {
 
 setup_ros_env
 
+default_map_yaml() {
+  local candidate
+  for candidate in \
+    "${B002_MAP_YAML:-}" \
+    "${ROOT_DIR}/../turtlebot4_jazzy/maps/B002_map.yaml" \
+    "/home/mhc/Germany/turtlebot4_jazzy/maps/B002_map.yaml"; do
+    if [ -n "${candidate}" ] && [ -f "${candidate}" ]; then
+      printf '%s\n' "${candidate}"
+      return
+    fi
+  done
+  printf '%s\n' "/home/mhc/Germany/turtlebot4_jazzy/maps/B002_map.yaml"
+}
+
 MAP_YAML="$(
   (ros2 param get /map_server yaml_filename 2>/dev/null || true) \
     | sed -n 's/^String value is: //p' \
@@ -52,7 +66,7 @@ MAP_YAML="$(
 )"
 
 if [ -z "${MAP_YAML}" ] || [ ! -f "${MAP_YAML}" ]; then
-  MAP_YAML="/home/mhc/Germany/turtlebot4_jazzy/maps/B002_map.yaml"
+  MAP_YAML="$(default_map_yaml)"
 fi
 
 echo "[*] Mapa para obstaculos 3D: ${MAP_YAML}"

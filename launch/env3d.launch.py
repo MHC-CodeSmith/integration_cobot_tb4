@@ -5,10 +5,11 @@ from launch import LaunchDescription
 from launch.actions import ExecuteProcess, OpaqueFunction, SetEnvironmentVariable, UnsetEnvironmentVariable
 
 
-FLOOR_URDF = Path("/home/mhc/Germany/cobot_tb4_integration/generated/map_floor_3d.urdf")
-OBSTACLES_URDF = Path("/home/mhc/Germany/cobot_tb4_integration/generated/map_obstacles_3d.urdf")
-FURNITURE_URDF = Path("/home/mhc/Germany/cobot_tb4_integration/generated/room_furniture_3d.urdf")
-MARKER_PUBLISHER = Path("/home/mhc/Germany/cobot_tb4_integration/tools_urdf_marker_publisher.py")
+ROOT_DIR = Path(__file__).resolve().parents[1]
+FLOOR_URDF = ROOT_DIR / "generated" / "map_floor_3d.urdf"
+OBSTACLES_URDF = ROOT_DIR / "generated" / "map_obstacles_3d.urdf"
+FURNITURE_URDF = ROOT_DIR / "generated" / "room_furniture_3d.urdf"
+MARKER_PUBLISHER = ROOT_DIR / "tools_urdf_marker_publisher.py"
 
 
 def _marker_publisher(topic, marker_namespace, urdf_path):
