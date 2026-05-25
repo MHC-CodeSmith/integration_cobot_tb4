@@ -79,7 +79,7 @@ start_receiver() {
   stop_receiver
   setsid bash -lc "
     $(ros_env_for_child)
-    python3 ${ROOT_DIR}/tools_mycobot_joint_udp_receiver.py \
+    python3 ${ROOT_DIR}/tools/tools_mycobot_joint_udp_receiver.py \
       --bind 0.0.0.0 \
       --port ${PORT} \
       --topic /mycobot/joint_states
@@ -95,7 +95,7 @@ start_exporter() {
   fi
 
   stop_exporter
-  docker cp "${ROOT_DIR}/tools_mycobot_joint_udp_exporter.py" "${MYCOBOT_CONTAINER}:${EXPORTER_IN_CONTAINER}" >/dev/null
+  docker cp "${ROOT_DIR}/tools/tools_mycobot_joint_udp_exporter.py" "${MYCOBOT_CONTAINER}:${EXPORTER_IN_CONTAINER}" >/dev/null
 
   host_ip="${MYCOBOT_JOINT_HOST:-$(container_host_ip)}"
   if [ -z "${host_ip}" ]; then

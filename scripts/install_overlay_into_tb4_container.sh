@@ -25,7 +25,7 @@ MYCOBOT_DESCRIPTION_SRC="$(default_mycobot_description_src)"
 if ! docker ps --format '{{.Names}}' | grep -qx "${TB4_CONTAINER}"; then
   echo "[!] Container ${TB4_CONTAINER} nao esta rodando."
   echo "    Inicie o TurtleBot4 primeiro:"
-  echo "    cd ${ROOT_DIR}/../turtlebot4_jazzy && ./run_lab_world.sh true true 0.0 0.0 0.0"
+  echo "    cd ${ROOT_DIR}/../turtlebot4_jazzy && ./sim/run_lab_world.sh true true 0.0 0.0 0.0"
   exit 1
 fi
 

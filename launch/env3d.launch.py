@@ -9,7 +9,7 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 FLOOR_URDF = ROOT_DIR / "generated" / "map_floor_3d.urdf"
 OBSTACLES_URDF = ROOT_DIR / "generated" / "map_obstacles_3d.urdf"
 FURNITURE_URDF = ROOT_DIR / "generated" / "room_furniture_3d.urdf"
-MARKER_PUBLISHER = ROOT_DIR / "tools_urdf_marker_publisher.py"
+MARKER_PUBLISHER = ROOT_DIR / "tools" / "tools_urdf_marker_publisher.py"
 
 
 def _marker_publisher(topic, marker_namespace, urdf_path):

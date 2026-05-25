@@ -31,7 +31,7 @@ map
 
 ```bash
 cd /home/mhc/Germany/turtlebot4_jazzy
-./run_lab_world.sh true true 0.0 0.0 0.0
+./sim/run_lab_world.sh true true 0.0 0.0 0.0
 ```
 
 2. Em outro terminal, lance o overlay. Se o TurtleBot4 estiver rodando no host, use:
