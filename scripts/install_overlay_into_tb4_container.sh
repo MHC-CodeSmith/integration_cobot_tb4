@@ -9,7 +9,7 @@ MYCOBOT_DESCRIPTION_SRC="${MYCOBOT_DESCRIPTION_SRC:-/home/mhc/Germany/Cobot/myco
 if ! docker ps --format '{{.Names}}' | grep -qx "${TB4_CONTAINER}"; then
   echo "[!] Container ${TB4_CONTAINER} nao esta rodando."
   echo "    Inicie o TurtleBot4 primeiro:"
-  echo "    cd /home/mhc/Germany/turtlebot4_jazzy_docker && ./run_lab_world.sh true true 0.0 0.0 0.0"
+  echo "    cd /home/mhc/Germany/turtlebot4_jazzy && ./run_lab_world.sh true true 0.0 0.0 0.0"
   exit 1
 fi
 

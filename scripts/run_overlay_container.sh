@@ -15,7 +15,7 @@ fi
 if ! docker images --format '{{.Repository}}:{{.Tag}}' | grep -qx "${IMAGE}"; then
   echo "[!] Imagem ${IMAGE} nao encontrada."
   echo "    Build esperado:"
-  echo "    cd /home/mhc/Germany/turtlebot4_jazzy_docker && docker build --no-cache -t turtlebot4:jazzy ."
+  echo "    cd /home/mhc/Germany/turtlebot4_jazzy && docker build --no-cache -t turtlebot4:jazzy ."
   exit 1
 fi
 

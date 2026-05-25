@@ -517,13 +517,13 @@
       "norm_label": "uso rapido"
     },
     {
-      "label": "code:bash (cd /home/mhc/Germany/turtlebot4_jazzy_docker)",
+      "label": "code:bash (cd /home/mhc/Germany/turtlebot4_jazzy)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L32",
       "id": "cobot_tb4_integration_readme_codeblock_2",
       "community": 0,
-      "norm_label": "code:bash (cd /home/mhc/germany/turtlebot4_jazzy_docker)"
+      "norm_label": "code:bash (cd /home/mhc/germany/turtlebot4_jazzy)"
     },
     {
       "label": "code:bash (cd /home/mhc/Germany/cobot_tb4_integration)",

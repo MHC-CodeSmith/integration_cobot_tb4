@@ -52,7 +52,7 @@ MAP_YAML="$(
 )"
 
 if [ -z "${MAP_YAML}" ] || [ ! -f "${MAP_YAML}" ]; then
-  MAP_YAML="/home/mhc/Germany/turtlebot4_jazzy_docker/maps/B002_map.yaml"
+  MAP_YAML="/home/mhc/Germany/turtlebot4_jazzy/maps/B002_map.yaml"
 fi
 
 echo "[*] Mapa para obstaculos 3D: ${MAP_YAML}"

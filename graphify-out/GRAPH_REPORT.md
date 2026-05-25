@@ -50,7 +50,7 @@
 
 ### Community 0 - "Community 0"
 Cohesion: 0.13
-Nodes (14): Cobot + TurtleBot4 Integration Overlay, code:text (map), code:bash (cd /home/mhc/Germany/turtlebot4_jazzy_docker), code:bash (cd /home/mhc/Germany/cobot_tb4_integration), code:text (Galactic/container /joint_states -> UDP -> Jazzy/host /mycob), code:bash (cd /home/mhc/Germany/cobot_tb4_integration), code:bash (cd /home/mhc/Germany/cobot_tb4_integration), code:bash (cd /home/mhc/Germany/cobot_tb4_integration) (+6 more)
+Nodes (14): Cobot + TurtleBot4 Integration Overlay, code:text (map), code:bash (cd /home/mhc/Germany/turtlebot4_jazzy), code:bash (cd /home/mhc/Germany/cobot_tb4_integration), code:text (Galactic/container /joint_states -> UDP -> Jazzy/host /mycob), code:bash (cd /home/mhc/Germany/cobot_tb4_integration), code:bash (cd /home/mhc/Germany/cobot_tb4_integration), code:bash (cd /home/mhc/Germany/cobot_tb4_integration) (+6 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.42
@@ -65,7 +65,7 @@ Cohesion: 0.4
 Nodes (3): JointStateUdpExporter, main(), Node
 
 ## Knowledge Gaps
-- **9 isolated node(s):** `Ideia`, `code:text (map)`, `code:bash (cd /home/mhc/Germany/turtlebot4_jazzy_docker)`, `code:bash (cd /home/mhc/Germany/cobot_tb4_integration)`, `code:text (Galactic/container /joint_states -> UDP -> Jazzy/host /mycob)` (+4 more)
+- **9 isolated node(s):** `Ideia`, `code:text (map)`, `code:bash (cd /home/mhc/Germany/turtlebot4_jazzy)`, `code:bash (cd /home/mhc/Germany/cobot_tb4_integration)`, `code:text (Galactic/container /joint_states -> UDP -> Jazzy/host /mycob)` (+4 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -78,7 +78,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.073) - this node is a cross-community bridge._
 - **Why does `UdpJointStateImporter` connect `Community 5` to `Community 4`?**
   _High betweenness centrality (0.064) - this node is a cross-community bridge._
-- **What connects `Ideia`, `code:text (map)`, `code:bash (cd /home/mhc/Germany/turtlebot4_jazzy_docker)` to the rest of the system?**
+- **What connects `Ideia`, `code:text (map)`, `code:bash (cd /home/mhc/Germany/turtlebot4_jazzy)` to the rest of the system?**
   _9 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.13 - nodes in this community are weakly interconnected._

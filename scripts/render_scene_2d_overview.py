@@ -12,7 +12,7 @@ from generate_3d_assets import parse_simple_yaml, read_pgm
 
 
 ROOT_DIR = Path("/home/mhc/Germany/cobot_tb4_integration")
-DEFAULT_MAP_YAML = Path("/home/mhc/Germany/turtlebot4_jazzy_docker/maps/B002_map.yaml")
+DEFAULT_MAP_YAML = Path("/home/mhc/Germany/turtlebot4_jazzy/maps/B002_map.yaml")
 DEFAULT_FURNITURE_URDF = ROOT_DIR / "generated" / "room_furniture_3d.urdf"
 DEFAULT_OUT_PNG = ROOT_DIR / "generated" / "b002_scene_2d_overview.png"
 DEFAULT_OUT_MD = ROOT_DIR / "generated" / "b002_scene_2d_legend.md"

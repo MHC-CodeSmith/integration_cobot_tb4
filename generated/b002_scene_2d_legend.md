@@ -1,6 +1,6 @@
 # B002 3D Scene Overview
 
-- Map: `/home/mhc/Germany/turtlebot4_jazzy_docker/maps/B002_map.yaml`
+- Map: `/home/mhc/Germany/turtlebot4_jazzy/maps/B002_map.yaml`
 - Furniture URDF: `/home/mhc/Germany/cobot_tb4_integration/generated/room_furniture_3d.urdf`
 - Parsed semantic objects/parts: `96`
 - Coordinates are ROS `map` frame meters.

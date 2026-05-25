@@ -30,7 +30,7 @@ map
 1. Inicie o TurtleBot4 exatamente como ja funciona:
 
 ```bash
-cd /home/mhc/Germany/turtlebot4_jazzy_docker
+cd /home/mhc/Germany/turtlebot4_jazzy
 ./run_lab_world.sh true true 0.0 0.0 0.0
 ```
 
