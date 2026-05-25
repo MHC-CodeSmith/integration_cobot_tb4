@@ -1,28 +1,55 @@
+import os
 from pathlib import Path
 
 from launch import LaunchDescription
-from launch.actions import OpaqueFunction
-from launch_ros.actions import Node
+from launch.actions import ExecuteProcess, OpaqueFunction, SetEnvironmentVariable, UnsetEnvironmentVariable
 
 
+FLOOR_URDF = Path("/home/mhc/Germany/cobot_tb4_integration/generated/map_floor_3d.urdf")
 OBSTACLES_URDF = Path("/home/mhc/Germany/cobot_tb4_integration/generated/map_obstacles_3d.urdf")
+FURNITURE_URDF = Path("/home/mhc/Germany/cobot_tb4_integration/generated/room_furniture_3d.urdf")
+MARKER_PUBLISHER = Path("/home/mhc/Germany/cobot_tb4_integration/tools_urdf_marker_publisher.py")
+
+
+def _marker_publisher(topic, marker_namespace, urdf_path):
+    return ExecuteProcess(
+        cmd=[
+            "python3",
+            str(MARKER_PUBLISHER),
+            "--topic",
+            topic,
+            "--namespace",
+            marker_namespace,
+            "--file",
+            str(urdf_path),
+        ],
+        output="screen",
+    )
 
 
 def _nodes(_context):
     return [
-        Node(
-            package="robot_state_publisher",
-            executable="robot_state_publisher",
-            name="map_obstacles_3d_state_publisher",
-            namespace="env3d",
-            output="screen",
-            parameters=[{
-                "robot_description": OBSTACLES_URDF.read_text(),
-                "publish_frequency": 1.0,
-            }],
-        )
+        _marker_publisher("/env3d/floor_markers", "floor", FLOOR_URDF),
+        _marker_publisher("/env3d/wall_markers", "walls", OBSTACLES_URDF),
+        _marker_publisher("/env3d/furniture_markers", "furniture", FURNITURE_URDF),
     ]
 
 
 def generate_launch_description():
-    return LaunchDescription([OpaqueFunction(function=_nodes)])
+    actions = [
+        SetEnvironmentVariable("ROS_DOMAIN_ID", "0"),
+        SetEnvironmentVariable("ROS_AUTOMATIC_DISCOVERY_RANGE", "SUBNET"),
+        SetEnvironmentVariable("RMW_IMPLEMENTATION", "rmw_fastrtps_cpp"),
+        OpaqueFunction(function=_nodes),
+    ]
+
+    discovery_mode = os.environ.get("COBOT_TB4_DISCOVERY_MODE", "auto").lower()
+    discovery_server = os.environ.get("ROS_DISCOVERY_SERVER")
+    if discovery_mode == "local" or not discovery_server:
+        actions.insert(0, UnsetEnvironmentVariable("ROS_DISCOVERY_SERVER"))
+        actions.insert(1, SetEnvironmentVariable("ROS_SUPER_CLIENT", "False"))
+    else:
+        actions.insert(0, SetEnvironmentVariable("ROS_DISCOVERY_SERVER", discovery_server))
+        actions.insert(1, SetEnvironmentVariable("ROS_SUPER_CLIENT", os.environ.get("ROS_SUPER_CLIENT", "True")))
+
+    return LaunchDescription(actions)

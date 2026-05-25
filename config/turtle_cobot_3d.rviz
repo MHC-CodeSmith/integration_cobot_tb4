@@ -7,73 +7,108 @@ Visualization Manager:
   Class: ""
   Displays:
     - Class: rviz_default_plugins/Grid
-      Enabled: true
+      Enabled: false
       Name: Grid
       Plane: XY
-      Plane Cell Count: 20
+      Plane Cell Count: 30
       Cell Size: 1
-      Color: 120; 120; 120
-      Alpha: 0.5
-    - Class: rviz_default_plugins/Map
-      Enabled: false
-      Name: Flat Nav2 Map
+      Color: 180; 180; 180
+      Alpha: 0.3
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: Floor
+      Namespaces:
+        floor: true
       Topic:
-        Value: /map
-        Durability Policy: Transient Local
+        Value: /env3d/floor_markers
         Reliability Policy: Reliable
-      Alpha: 0.45
-      Draw Behind: true
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 5
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: Walls 3D
+      Namespaces:
+        walls: true
+      Topic:
+        Value: /env3d/wall_markers
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 5
+      Value: true
     - Class: rviz_default_plugins/RobotModel
       Enabled: true
-      Name: TurtleBot4 Model
+      Name: TurtleBot4
       Description Source: Topic
       Description Topic:
         Value: /robot_description
         Reliability Policy: Reliable
-        Durability Policy: Volatile
+        Durability Policy: Transient Local
         History Policy: Keep Last
         Depth: 5
       Collision Enabled: false
       Visual Enabled: true
     - Class: rviz_default_plugins/RobotModel
       Enabled: true
-      Name: MyCobot Model
-      Description Source: File
-      Description File: /home/mhc/Germany/cobot_tb4_integration/generated/mycobot_280_jn_visual.urdf
+      Name: MyCobot Arm
+      Description Source: Topic
+      Description Topic:
+        Value: /mycobot/robot_description
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 5
       Collision Enabled: false
       Visual Enabled: true
-    - Class: rviz_default_plugins/RobotModel
+    - Class: rviz_default_plugins/MarkerArray
       Enabled: true
-      Name: Occupancy Obstacles 3D
-      Description Source: File
-      Description File: /home/mhc/Germany/cobot_tb4_integration/generated/map_obstacles_3d.urdf
-      Collision Enabled: false
-      Visual Enabled: true
+      Name: Room Furniture
+      Namespaces:
+        furniture: true
+      Topic:
+        Value: /env3d/furniture_markers
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 5
+      Value: true
     - Class: rviz_default_plugins/TF
-      Enabled: true
+      Enabled: false
       Name: TF
-      Show Arrows: true
+      Show Arrows: false
       Show Axes: true
       Show Names: false
+    - Class: rviz_default_plugins/Map
+      Enabled: false
+      Name: Nav2 Map (flat)
+      Topic:
+        Value: /map
+        Durability Policy: Transient Local
+        Reliability Policy: Reliable
+      Alpha: 0.35
+      Draw Behind: true
   Enabled: true
   Global Options:
     Fixed Frame: map
-    Background Color: 35; 35; 35
-    Frame Rate: 30
+    Background Color: 210; 215; 225
+    Frame Rate: 15
   Tools:
     - Class: rviz_default_plugins/Interact
     - Class: rviz_default_plugins/MoveCamera
     - Class: rviz_default_plugins/Measure
+    - Class: rviz_default_plugins/PublishPoint
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 8
+      Distance: 14
       Focal Point:
-        X: -1.5
-        Y: 2.0
+        X: -2.33
+        Y: 2.32
         Z: 0.4
-      Pitch: 0.82
-      Yaw: 0.75
+      Pitch: 0.78
+      Yaw: 0.60
       Name: Current View
 Window Geometry:
   Width: 1400

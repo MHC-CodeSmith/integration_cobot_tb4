@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot name="tb4_floor">
+  <link name="map"/>
+  <material name="floor_mat"><color rgba="0.30 0.32 0.34 1.00"/></material>
+  <link name="floor_plane">
+    <visual>
+      <geometry><box size="6.5500 10.9500 0.005"/></geometry>
+      <material name="floor_mat"/>
+    </visual>
+  </link>
+  <joint name="floor_joint" type="fixed">
+    <parent link="map"/>
+    <child link="floor_plane"/>
+    <origin xyz="-2.3340 2.3180 -0.0025" rpy="0 0 0"/>
+  </joint>
+</robot>

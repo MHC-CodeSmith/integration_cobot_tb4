@@ -18,8 +18,8 @@ class TableMarkerNode(Node):
         super().__init__("table_marker_node")
 
         self.declare_parameter("frame_id", "map")
-        self.declare_parameter("x", -2.9394)
-        self.declare_parameter("y", 4.1843)
+        self.declare_parameter("x", -0.338416188955307)
+        self.declare_parameter("y", 1.1060110330581665)
         self.declare_parameter("z", 0.80)
         self.declare_parameter("yaw", 0.0)
         self.declare_parameter("table_length", 0.90)

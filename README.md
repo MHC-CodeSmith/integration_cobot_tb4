@@ -7,7 +7,7 @@ Terceira camada para visualizar TurtleBot4 e MyCobot no mesmo referencial, sem a
 - TurtleBot4 continua rodando como hoje: ROS 2 Jazzy, Gazebo Harmonic, Nav2, FastDDS.
 - MyCobot continua rodando como hoje: ROS 2 Galactic, MoveIt, CycloneDDS, bridge no Jetson Nano.
 - Este overlay só adiciona:
-  - `map -> mycobot_base_link` fixo em `x=-2.9394`, `y=4.1843`, `z=0.80`;
+  - `map -> mycobot_base_link` fixo em `x=-0.338416188955307`, `y=1.1060110330581665`, `z=0.80`;
   - uma mesa visual nessa posição;
   - o modelo URDF do MyCobot no RViz do lado Jazzy;
   - espelhamento de `/joint_states` do MyCobot via UDP para visualizacao no grafo Jazzy.
@@ -17,8 +17,8 @@ Terceira camada para visualizar TurtleBot4 e MyCobot no mesmo referencial, sem a
 ```text
 map
 └── mycobot_base_link
-    x:   -2.9394
-    y:    4.1843
+    x:   -0.338416188955307
+    y:    1.1060110330581665
     z:    0.80
     yaw:  0.0
 ```

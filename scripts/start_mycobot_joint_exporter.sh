@@ -9,6 +9,42 @@ EXPORTER_IN_CONTAINER="/tmp/mycobot_joint_udp_exporter.py"
 EXPORTER_LOG_IN_CONTAINER="/tmp/mycobot_joint_udp_exporter.log"
 RECEIVER_PID_FILE="/tmp/cobot_tb4_mycobot_joint_receiver.pid"
 RECEIVER_LOG="/tmp/cobot_tb4_mycobot_joint_receiver.log"
+DISCOVERY_MODE="${COBOT_TB4_DISCOVERY_MODE:-auto}"
+
+setup_ros_env() {
+  had_nounset=0
+  case "$-" in *u*) had_nounset=1; set +u ;; esac
+  source /opt/ros/jazzy/setup.bash
+  if [ "${had_nounset}" -eq 1 ]; then
+    set -u
+  fi
+  export ROS_DOMAIN_ID="${ROS_DOMAIN_ID:-0}"
+  export ROS_AUTOMATIC_DISCOVERY_RANGE="${ROS_AUTOMATIC_DISCOVERY_RANGE:-SUBNET}"
+  export RMW_IMPLEMENTATION="${RMW_IMPLEMENTATION:-rmw_fastrtps_cpp}"
+  export COBOT_TB4_DISCOVERY_MODE="${DISCOVERY_MODE}"
+
+  if [ "${DISCOVERY_MODE}" = "local" ]; then
+    unset ROS_DISCOVERY_SERVER ROS_SUPER_CLIENT
+  elif [ -n "${ROS_DISCOVERY_SERVER:-}" ]; then
+    export ROS_SUPER_CLIENT="${ROS_SUPER_CLIENT:-True}"
+  else
+    unset ROS_DISCOVERY_SERVER ROS_SUPER_CLIENT
+  fi
+}
+
+ros_env_for_child() {
+  printf 'source /opt/ros/jazzy/setup.bash\n'
+  printf 'export ROS_DOMAIN_ID=%q\n' "${ROS_DOMAIN_ID}"
+  printf 'export ROS_AUTOMATIC_DISCOVERY_RANGE=%q\n' "${ROS_AUTOMATIC_DISCOVERY_RANGE}"
+  printf 'export RMW_IMPLEMENTATION=%q\n' "${RMW_IMPLEMENTATION}"
+  printf 'export COBOT_TB4_DISCOVERY_MODE=%q\n' "${COBOT_TB4_DISCOVERY_MODE}"
+  if [ -n "${ROS_DISCOVERY_SERVER:-}" ]; then
+    printf 'export ROS_DISCOVERY_SERVER=%q\n' "${ROS_DISCOVERY_SERVER}"
+    printf 'export ROS_SUPER_CLIENT=%q\n' "${ROS_SUPER_CLIENT:-True}"
+  else
+    printf 'unset ROS_DISCOVERY_SERVER ROS_SUPER_CLIENT\n'
+  fi
+}
 
 container_is_running() {
   docker ps --format '{{.Names}}' | grep -qx "${MYCOBOT_CONTAINER}"
@@ -39,12 +75,10 @@ container_host_ip() {
 }
 
 start_receiver() {
+  setup_ros_env
   stop_receiver
   setsid bash -lc "
-    source /opt/ros/jazzy/setup.bash
-    export ROS_DOMAIN_ID=0
-    export ROS_AUTOMATIC_DISCOVERY_RANGE=SUBNET
-    export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+    $(ros_env_for_child)
     python3 ${ROOT_DIR}/tools_mycobot_joint_udp_receiver.py \
       --bind 0.0.0.0 \
       --port ${PORT} \

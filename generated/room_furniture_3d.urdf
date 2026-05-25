@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<robot name="room_furniture">
+  <link name="map"/>
+  <material name="mat_furn_0"><color rgba="0.05 0.70 0.24 0.45"/></material>
+  <link name="furn_0"><visual><geometry><box size="1.0000 2.0000 0.0180"/></geometry><material name="mat_furn_0"/></visual></link>
+  <joint name="furn_0_j" type="fixed"><parent link="map"/><child link="furn_0"/><origin xyz="0.0000 2.1500 0.0120" rpy="0 0 0"/></joint>
+  <material name="mat_furn_1"><color rgba="1.00 0.55 0.05 0.45"/></material>
+  <link name="furn_1"><visual><geometry><box size="2.0000 0.6200 0.0180"/></geometry><material name="mat_furn_1"/></visual></link>
+  <joint name="furn_1_j" type="fixed"><parent link="map"/><child link="furn_1"/><origin xyz="0.0000 6.7800 0.0120" rpy="0 0 0"/></joint>
+  <material name="mat_furn_2"><color rgba="1.00 0.55 0.05 0.45"/></material>
+  <link name="furn_2"><visual><geometry><box size="0.6200 1.8000 0.0180"/></geometry><material name="mat_furn_2"/></visual></link>
+  <joint name="furn_2_j" type="fixed"><parent link="map"/><child link="furn_2"/><origin xyz="0.5500 5.6200 0.0120" rpy="0 0 0"/></joint>
+  <material name="mat_furn_3"><color rgba="0.95 0.05 0.70 0.45"/></material>
+  <link name="furn_3"><visual><geometry><box size="1.3000 0.9500 0.0180"/></geometry><material name="mat_furn_3"/></visual></link>
+  <joint name="furn_3_j" type="fixed"><parent link="map"/><child link="furn_3"/><origin xyz="-4.4500 1.2000 0.0120" rpy="0 0 0"/></joint>
+  <material name="mat_furn_4"><color rgba="0.95 0.05 0.70 0.45"/></material>
+  <link name="furn_4"><visual><geometry><box size="1.5500 1.2500 0.0180"/></geometry><material name="mat_furn_4"/></visual></link>
+  <joint name="furn_4_j" type="fixed"><parent link="map"/><child link="furn_4"/><origin xyz="-4.4500 5.3500 0.0120" rpy="0 0 0"/></joint>
+  <material name="mat_furn_5"><color rgba="0.92 0.92 0.88 1.00"/></material>
+  <link name="furn_5"><visual><geometry><box size="0.8200 1.9000 0.8600"/></geometry><material name="mat_furn_5"/></visual></link>
+  <joint name="furn_5_j" type="fixed"><parent link="map"/><child link="furn_5"/><origin xyz="0.0000 2.1500 0.4300" rpy="0 0 0"/></joint>
+  <material name="mat_furn_6"><color rgba="0.10 0.10 0.10 1.00"/></material>
+  <link name="furn_6"><visual><geometry><box size="0.9000 1.9500 0.0500"/></geometry><material name="mat_furn_6"/></visual></link>
+  <joint name="furn_6_j" type="fixed"><parent link="map"/><child link="furn_6"/><origin xyz="0.0000 2.1500 0.8900" rpy="0 0 0"/></joint>
+  <material name="mat_furn_7"><color rgba="0.72 0.73 0.72 1.00"/></material>
+  <link name="furn_7"><visual><geometry><box size="0.1400 2.1000 0.1200"/></geometry><material name="mat_furn_7"/></visual></link>
+  <joint name="furn_7_j" type="fixed"><parent link="map"/><child link="furn_7"/><origin xyz="-0.4600 2.1500 1.0200" rpy="0 0 0"/></joint>
+  <material name="mat_furn_8"><color rgba="0.72 0.73 0.72 1.00"/></material>
+  <link name="furn_8"><visual><geometry><box size="0.1000 2.2500 0.1000"/></geometry><material name="mat_furn_8"/></visual></link>
+  <joint name="furn_8_j" type="fixed"><parent link="map"/><child link="furn_8"/><origin xyz="-0.4800 2.1500 0.3000" rpy="0 0 0"/></joint>
+  <material name="mat_furn_9"><color rgba="0.74 0.75 0.72 1.00"/></material>
+  <link name="furn_9"><visual><geometry><box size="0.3200 0.8600 1.0500"/></geometry><material name="mat_furn_9"/></visual></link>
+  <joint name="furn_9_j" type="fixed"><parent link="map"/><child link="furn_9"/><origin xyz="0.2000 1.5300 1.4700" rpy="0 0 0"/></joint>
+  <material name="mat_furn_10"><color rgba="0.60 0.61 0.58 1.00"/></material>
+  <link name="furn_10"><visual><geometry><box size="0.0280 0.9200 1.1800"/></geometry><material name="mat_furn_10"/></visual></link>
+  <joint name="furn_10_j" type="fixed"><parent link="map"/><child link="furn_10"/><origin xyz="0.0200 1.5300 1.4800" rpy="0 0 0"/></joint>
+  <material name="mat_furn_11"><color rgba="0.02 0.65 0.70 1.00"/></material>
+  <link name="furn_11"><visual><geometry><box size="0.0350 0.2600 0.1800"/></geometry><material name="mat_furn_11"/></visual></link>
+  <joint name="furn_11_j" type="fixed"><parent link="map"/><child link="furn_11"/><origin xyz="-0.2800 1.3200 1.4800" rpy="0 0 0"/></joint>
+  <material name="mat_furn_12"><color rgba="0.02 0.55 0.18 1.00"/></material>
+  <link name="furn_12"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_12"/></visual></link>
+  <joint name="furn_12_j" type="fixed"><parent link="map"/><child link="furn_12"/><origin xyz="-0.3400 1.1900 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_13"><color rgba="0.95 0.82 0.05 1.00"/></material>
+  <link name="furn_13"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_13"/></visual></link>
+  <joint name="furn_13_j" type="fixed"><parent link="map"/><child link="furn_13"/><origin xyz="-0.3400 1.8700 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_14"><color rgba="0.02 0.55 0.18 1.00"/></material>
+  <link name="furn_14"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_14"/></visual></link>
+  <joint name="furn_14_j" type="fixed"><parent link="map"/><child link="furn_14"/><origin xyz="-0.1000 1.1900 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_15"><color rgba="0.95 0.82 0.05 1.00"/></material>
+  <link name="furn_15"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_15"/></visual></link>
+  <joint name="furn_15_j" type="fixed"><parent link="map"/><child link="furn_15"/><origin xyz="-0.1000 1.8700 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_16"><color rgba="0.02 0.55 0.18 1.00"/></material>
+  <link name="furn_16"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_16"/></visual></link>
+  <joint name="furn_16_j" type="fixed"><parent link="map"/><child link="furn_16"/><origin xyz="0.1400 1.1900 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_17"><color rgba="0.95 0.82 0.05 1.00"/></material>
+  <link name="furn_17"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_17"/></visual></link>
+  <joint name="furn_17_j" type="fixed"><parent link="map"/><child link="furn_17"/><origin xyz="0.1400 1.8700 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_18"><color rgba="0.74 0.75 0.72 1.00"/></material>
+  <link name="furn_18"><visual><geometry><box size="0.3200 0.8600 1.0500"/></geometry><material name="mat_furn_18"/></visual></link>
+  <joint name="furn_18_j" type="fixed"><parent link="map"/><child link="furn_18"/><origin xyz="0.2000 2.1500 1.4700" rpy="0 0 0"/></joint>
+  <material name="mat_furn_19"><color rgba="0.60 0.61 0.58 1.00"/></material>
+  <link name="furn_19"><visual><geometry><box size="0.0280 0.9200 1.1800"/></geometry><material name="mat_furn_19"/></visual></link>
+  <joint name="furn_19_j" type="fixed"><parent link="map"/><child link="furn_19"/><origin xyz="0.0200 2.1500 1.4800" rpy="0 0 0"/></joint>
+  <material name="mat_furn_20"><color rgba="0.02 0.65 0.70 1.00"/></material>
+  <link name="furn_20"><visual><geometry><box size="0.0350 0.2600 0.1800"/></geometry><material name="mat_furn_20"/></visual></link>
+  <joint name="furn_20_j" type="fixed"><parent link="map"/><child link="furn_20"/><origin xyz="-0.2800 1.9400 1.4800" rpy="0 0 0"/></joint>
+  <material name="mat_furn_21"><color rgba="0.02 0.55 0.18 1.00"/></material>
+  <link name="furn_21"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_21"/></visual></link>
+  <joint name="furn_21_j" type="fixed"><parent link="map"/><child link="furn_21"/><origin xyz="-0.3400 1.8100 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_22"><color rgba="0.95 0.82 0.05 1.00"/></material>
+  <link name="furn_22"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_22"/></visual></link>
+  <joint name="furn_22_j" type="fixed"><parent link="map"/><child link="furn_22"/><origin xyz="-0.3400 2.4900 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_23"><color rgba="0.02 0.55 0.18 1.00"/></material>
+  <link name="furn_23"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_23"/></visual></link>
+  <joint name="furn_23_j" type="fixed"><parent link="map"/><child link="furn_23"/><origin xyz="-0.1000 1.8100 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_24"><color rgba="0.95 0.82 0.05 1.00"/></material>
+  <link name="furn_24"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_24"/></visual></link>
+  <joint name="furn_24_j" type="fixed"><parent link="map"/><child link="furn_24"/><origin xyz="-0.1000 2.4900 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_25"><color rgba="0.02 0.55 0.18 1.00"/></material>
+  <link name="furn_25"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_25"/></visual></link>
+  <joint name="furn_25_j" type="fixed"><parent link="map"/><child link="furn_25"/><origin xyz="0.1400 1.8100 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_26"><color rgba="0.95 0.82 0.05 1.00"/></material>
+  <link name="furn_26"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_26"/></visual></link>
+  <joint name="furn_26_j" type="fixed"><parent link="map"/><child link="furn_26"/><origin xyz="0.1400 2.4900 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_27"><color rgba="0.74 0.75 0.72 1.00"/></material>
+  <link name="furn_27"><visual><geometry><box size="0.3200 0.8600 1.0500"/></geometry><material name="mat_furn_27"/></visual></link>
+  <joint name="furn_27_j" type="fixed"><parent link="map"/><child link="furn_27"/><origin xyz="0.2000 2.7700 1.4700" rpy="0 0 0"/></joint>
+  <material name="mat_furn_28"><color rgba="0.60 0.61 0.58 1.00"/></material>
+  <link name="furn_28"><visual><geometry><box size="0.0280 0.9200 1.1800"/></geometry><material name="mat_furn_28"/></visual></link>
+  <joint name="furn_28_j" type="fixed"><parent link="map"/><child link="furn_28"/><origin xyz="0.0200 2.7700 1.4800" rpy="0 0 0"/></joint>
+  <material name="mat_furn_29"><color rgba="0.02 0.65 0.70 1.00"/></material>
+  <link name="furn_29"><visual><geometry><box size="0.0350 0.2600 0.1800"/></geometry><material name="mat_furn_29"/></visual></link>
+  <joint name="furn_29_j" type="fixed"><parent link="map"/><child link="furn_29"/><origin xyz="-0.2800 2.5600 1.4800" rpy="0 0 0"/></joint>
+  <material name="mat_furn_30"><color rgba="0.02 0.55 0.18 1.00"/></material>
+  <link name="furn_30"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_30"/></visual></link>
+  <joint name="furn_30_j" type="fixed"><parent link="map"/><child link="furn_30"/><origin xyz="-0.3400 2.4300 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_31"><color rgba="0.95 0.82 0.05 1.00"/></material>
+  <link name="furn_31"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_31"/></visual></link>
+  <joint name="furn_31_j" type="fixed"><parent link="map"/><child link="furn_31"/><origin xyz="-0.3400 3.1100 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_32"><color rgba="0.02 0.55 0.18 1.00"/></material>
+  <link name="furn_32"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_32"/></visual></link>
+  <joint name="furn_32_j" type="fixed"><parent link="map"/><child link="furn_32"/><origin xyz="-0.1000 2.4300 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_33"><color rgba="0.95 0.82 0.05 1.00"/></material>
+  <link name="furn_33"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_33"/></visual></link>
+  <joint name="furn_33_j" type="fixed"><parent link="map"/><child link="furn_33"/><origin xyz="-0.1000 3.1100 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_34"><color rgba="0.02 0.55 0.18 1.00"/></material>
+  <link name="furn_34"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_34"/></visual></link>
+  <joint name="furn_34_j" type="fixed"><parent link="map"/><child link="furn_34"/><origin xyz="0.1400 2.4300 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_35"><color rgba="0.95 0.82 0.05 1.00"/></material>
+  <link name="furn_35"><visual><geometry><cylinder radius="0.0450" length="0.0450"/></geometry><material name="mat_furn_35"/></visual></link>
+  <joint name="furn_35_j" type="fixed"><parent link="map"/><child link="furn_35"/><origin xyz="0.1400 3.1100 0.9400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_36"><color rgba="0.08 0.28 0.78 1.00"/></material>
+  <link name="furn_36"><visual><geometry><box size="0.1300 0.1000 0.3800"/></geometry><material name="mat_furn_36"/></visual></link>
+  <joint name="furn_36_j" type="fixed"><parent link="map"/><child link="furn_36"/><origin xyz="-0.4200 1.3300 1.1500" rpy="0 0 0"/></joint>
+  <material name="mat_furn_37"><color rgba="0.08 0.28 0.78 1.00"/></material>
+  <link name="furn_37"><visual><geometry><box size="0.1300 0.1000 0.3800"/></geometry><material name="mat_furn_37"/></visual></link>
+  <joint name="furn_37_j" type="fixed"><parent link="map"/><child link="furn_37"/><origin xyz="-0.4200 1.6000 1.1500" rpy="0 0 0"/></joint>
+  <material name="mat_furn_38"><color rgba="0.08 0.28 0.78 1.00"/></material>
+  <link name="furn_38"><visual><geometry><box size="0.1300 0.1000 0.3800"/></geometry><material name="mat_furn_38"/></visual></link>
+  <joint name="furn_38_j" type="fixed"><parent link="map"/><child link="furn_38"/><origin xyz="-0.4200 1.8700 1.1500" rpy="0 0 0"/></joint>
+  <material name="mat_furn_39"><color rgba="0.08 0.28 0.78 1.00"/></material>
+  <link name="furn_39"><visual><geometry><box size="0.1300 0.1000 0.3800"/></geometry><material name="mat_furn_39"/></visual></link>
+  <joint name="furn_39_j" type="fixed"><parent link="map"/><child link="furn_39"/><origin xyz="-0.4200 2.1500 1.1500" rpy="0 0 0"/></joint>
+  <material name="mat_furn_40"><color rgba="0.08 0.28 0.78 1.00"/></material>
+  <link name="furn_40"><visual><geometry><box size="0.1300 0.1000 0.3800"/></geometry><material name="mat_furn_40"/></visual></link>
+  <joint name="furn_40_j" type="fixed"><parent link="map"/><child link="furn_40"/><origin xyz="-0.4200 2.4300 1.1500" rpy="0 0 0"/></joint>
+  <material name="mat_furn_41"><color rgba="0.08 0.28 0.78 1.00"/></material>
+  <link name="furn_41"><visual><geometry><box size="0.1300 0.1000 0.3800"/></geometry><material name="mat_furn_41"/></visual></link>
+  <joint name="furn_41_j" type="fixed"><parent link="map"/><child link="furn_41"/><origin xyz="-0.4200 2.7000 1.1500" rpy="0 0 0"/></joint>
+  <material name="mat_furn_42"><color rgba="0.08 0.28 0.78 1.00"/></material>
+  <link name="furn_42"><visual><geometry><box size="0.1300 0.1000 0.3800"/></geometry><material name="mat_furn_42"/></visual></link>
+  <joint name="furn_42_j" type="fixed"><parent link="map"/><child link="furn_42"/><origin xyz="-0.4200 2.9700 1.1500" rpy="0 0 0"/></joint>
+  <material name="mat_furn_43"><color rgba="0.03 0.03 0.04 1.00"/></material>
+  <link name="furn_43"><visual><geometry><box size="0.1000 1.2000 0.7500"/></geometry><material name="mat_furn_43"/></visual></link>
+  <joint name="furn_43_j" type="fixed"><parent link="map"/><child link="furn_43"/><origin xyz="0.4200 3.5000 1.1200" rpy="0 0 0"/></joint>
+  <material name="mat_furn_44"><color rgba="0.86 0.86 0.82 1.00"/></material>
+  <link name="furn_44"><visual><geometry><box size="0.0800 0.1000 1.6500"/></geometry><material name="mat_furn_44"/></visual></link>
+  <joint name="furn_44_j" type="fixed"><parent link="map"/><child link="furn_44"/><origin xyz="0.4200 3.5000 0.8400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_45"><color rgba="0.86 0.86 0.82 1.00"/></material>
+  <link name="furn_45"><visual><geometry><box size="0.6200 0.7600 0.0450"/></geometry><material name="mat_furn_45"/></visual></link>
+  <joint name="furn_45_j" type="fixed"><parent link="map"/><child link="furn_45"/><origin xyz="0.4200 3.5000 0.0400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_46"><color rgba="0.92 0.82 0.45 1.00"/></material>
+  <link name="furn_46"><visual><geometry><cylinder radius="0.2300" length="0.6200"/></geometry><material name="mat_furn_46"/></visual></link>
+  <joint name="furn_46_j" type="fixed"><parent link="map"/><child link="furn_46"/><origin xyz="0.6000 3.5000 0.3200" rpy="0 1.5708 0"/></joint>
+  <material name="mat_furn_47"><color rgba="0.25 0.25 0.25 1.00"/></material>
+  <link name="furn_47"><visual><geometry><box size="0.3600 0.3000 0.3400"/></geometry><material name="mat_furn_47"/></visual></link>
+  <joint name="furn_47_j" type="fixed"><parent link="map"/><child link="furn_47"/><origin xyz="0.3000 3.5000 0.5800" rpy="0 0 0"/></joint>
+  <material name="mat_furn_48"><color rgba="0.94 0.91 0.82 1.00"/></material>
+  <link name="furn_48"><visual><geometry><box size="0.7200 0.9000 0.0450"/></geometry><material name="mat_furn_48"/></visual></link>
+  <joint name="furn_48_j" type="fixed"><parent link="map"/><child link="furn_48"/><origin xyz="-4.4800 1.2000 0.7600" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_49"><color rgba="0.32 0.32 0.34 1.00"/></material>
+  <link name="furn_49"><visual><geometry><box size="0.6400 0.8200 0.6600"/></geometry><material name="mat_furn_49"/></visual></link>
+  <joint name="furn_49_j" type="fixed"><parent link="map"/><child link="furn_49"/><origin xyz="-4.4800 1.2000 0.3500" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_50"><color rgba="0.83 0.62 0.22 1.00"/></material>
+  <link name="furn_50"><visual><geometry><box size="0.7400 0.0550 0.0600"/></geometry><material name="mat_furn_50"/></visual></link>
+  <joint name="furn_50_j" type="fixed"><parent link="map"/><child link="furn_50"/><origin xyz="-4.4800 1.6500 0.7900" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_51"><color rgba="0.94 0.91 0.82 1.00"/></material>
+  <link name="furn_51"><visual><geometry><box size="0.8600 1.3500 0.0450"/></geometry><material name="mat_furn_51"/></visual></link>
+  <joint name="furn_51_j" type="fixed"><parent link="map"/><child link="furn_51"/><origin xyz="-4.4200 5.3500 0.7600" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_52"><color rgba="0.32 0.32 0.34 1.00"/></material>
+  <link name="furn_52"><visual><geometry><box size="0.7800 1.2700 0.6600"/></geometry><material name="mat_furn_52"/></visual></link>
+  <joint name="furn_52_j" type="fixed"><parent link="map"/><child link="furn_52"/><origin xyz="-4.4200 5.3500 0.3500" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_53"><color rgba="0.83 0.62 0.22 1.00"/></material>
+  <link name="furn_53"><visual><geometry><box size="0.8800 0.0550 0.0600"/></geometry><material name="mat_furn_53"/></visual></link>
+  <joint name="furn_53_j" type="fixed"><parent link="map"/><child link="furn_53"/><origin xyz="-4.4200 6.0250 0.7900" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_54"><color rgba="0.08 0.08 0.09 1.00"/></material>
+  <link name="furn_54"><visual><geometry><box size="0.4600 0.4400 0.0800"/></geometry><material name="mat_furn_54"/></visual></link>
+  <joint name="furn_54_j" type="fixed"><parent link="map"/><child link="furn_54"/><origin xyz="-3.9200 1.1000 0.4600" rpy="0 0 0.0000"/></joint>
+  <material name="mat_furn_55"><color rgba="0.08 0.08 0.09 1.00"/></material>
+  <link name="furn_55"><visual><geometry><box size="0.4600 0.0600 0.5800"/></geometry><material name="mat_furn_55"/></visual></link>
+  <joint name="furn_55_j" type="fixed"><parent link="map"/><child link="furn_55"/><origin xyz="-3.9200 1.3300 0.7500" rpy="0 0 0.0000"/></joint>
+  <material name="mat_furn_56"><color rgba="0.05 0.05 0.06 1.00"/></material>
+  <link name="furn_56"><visual><geometry><box size="0.5200 0.4800 0.0550"/></geometry><material name="mat_furn_56"/></visual></link>
+  <joint name="furn_56_j" type="fixed"><parent link="map"/><child link="furn_56"/><origin xyz="-3.9200 1.0500 0.0800" rpy="0 0 0.0000"/></joint>
+  <material name="mat_furn_57"><color rgba="0.08 0.08 0.09 1.00"/></material>
+  <link name="furn_57"><visual><geometry><box size="0.4600 0.4400 0.0800"/></geometry><material name="mat_furn_57"/></visual></link>
+  <joint name="furn_57_j" type="fixed"><parent link="map"/><child link="furn_57"/><origin xyz="-3.8600 5.2500 0.4600" rpy="0 0 0.0000"/></joint>
+  <material name="mat_furn_58"><color rgba="0.08 0.08 0.09 1.00"/></material>
+  <link name="furn_58"><visual><geometry><box size="0.4600 0.0600 0.5800"/></geometry><material name="mat_furn_58"/></visual></link>
+  <joint name="furn_58_j" type="fixed"><parent link="map"/><child link="furn_58"/><origin xyz="-3.8600 5.4800 0.7500" rpy="0 0 0.0000"/></joint>
+  <material name="mat_furn_59"><color rgba="0.05 0.05 0.06 1.00"/></material>
+  <link name="furn_59"><visual><geometry><box size="0.5200 0.4800 0.0550"/></geometry><material name="mat_furn_59"/></visual></link>
+  <joint name="furn_59_j" type="fixed"><parent link="map"/><child link="furn_59"/><origin xyz="-3.8600 5.2000 0.0800" rpy="0 0 0.0000"/></joint>
+  <material name="mat_furn_60"><color rgba="0.96 0.96 0.94 1.00"/></material>
+  <link name="furn_60"><visual><geometry><box size="0.0550 1.1800 0.9200"/></geometry><material name="mat_furn_60"/></visual></link>
+  <joint name="furn_60_j" type="fixed"><parent link="map"/><child link="furn_60"/><origin xyz="-4.7000 3.2500 0.9500" rpy="0 0 0.0000"/></joint>
+  <material name="mat_furn_61"><color rgba="0.28 0.29 0.30 1.00"/></material>
+  <link name="furn_61"><visual><geometry><box size="0.0750 1.2800 0.0650"/></geometry><material name="mat_furn_61"/></visual></link>
+  <joint name="furn_61_j" type="fixed"><parent link="map"/><child link="furn_61"/><origin xyz="-4.7000 3.2500 1.4300" rpy="0 0 0.0000"/></joint>
+  <material name="mat_furn_62"><color rgba="0.28 0.29 0.30 1.00"/></material>
+  <link name="furn_62"><visual><geometry><box size="0.0750 1.2800 0.0650"/></geometry><material name="mat_furn_62"/></visual></link>
+  <joint name="furn_62_j" type="fixed"><parent link="map"/><child link="furn_62"/><origin xyz="-4.7000 3.2500 0.4700" rpy="0 0 0.0000"/></joint>
+  <material name="mat_furn_63"><color rgba="0.24 0.25 0.26 1.00"/></material>
+  <link name="furn_63"><visual><geometry><box size="0.0450 0.0450 1.6500"/></geometry><material name="mat_furn_63"/></visual></link>
+  <joint name="furn_63_j" type="fixed"><parent link="map"/><child link="furn_63"/><origin xyz="-4.7000 2.6900 0.8200" rpy="0 0 0.0000"/></joint>
+  <material name="mat_furn_64"><color rgba="0.24 0.25 0.26 1.00"/></material>
+  <link name="furn_64"><visual><geometry><box size="0.0450 0.0450 1.6500"/></geometry><material name="mat_furn_64"/></visual></link>
+  <joint name="furn_64_j" type="fixed"><parent link="map"/><child link="furn_64"/><origin xyz="-4.7000 3.8100 0.8200" rpy="0 0 0.0000"/></joint>
+  <material name="mat_furn_65"><color rgba="0.24 0.25 0.26 1.00"/></material>
+  <link name="furn_65"><visual><geometry><box size="0.0800 0.6200 0.0350"/></geometry><material name="mat_furn_65"/></visual></link>
+  <joint name="furn_65_j" type="fixed"><parent link="map"/><child link="furn_65"/><origin xyz="-4.7000 2.6900 0.0350" rpy="0 0 0.0000"/></joint>
+  <material name="mat_furn_66"><color rgba="0.24 0.25 0.26 1.00"/></material>
+  <link name="furn_66"><visual><geometry><box size="0.0800 0.6200 0.0350"/></geometry><material name="mat_furn_66"/></visual></link>
+  <joint name="furn_66_j" type="fixed"><parent link="map"/><child link="furn_66"/><origin xyz="-4.7000 3.8100 0.0350" rpy="0 0 0.0000"/></joint>
+  <material name="mat_furn_67"><color rgba="0.84 0.84 0.80 1.00"/></material>
+  <link name="furn_67"><visual><geometry><box size="0.3200 0.4600 0.7200"/></geometry><material name="mat_furn_67"/></visual></link>
+  <joint name="furn_67_j" type="fixed"><parent link="map"/><child link="furn_67"/><origin xyz="-4.9200 5.8500 0.3600" rpy="0 0 0"/></joint>
+  <material name="mat_furn_68"><color rgba="0.94 0.91 0.82 1.00"/></material>
+  <link name="furn_68"><visual><geometry><box size="1.9200 0.5800 0.0450"/></geometry><material name="mat_furn_68"/></visual></link>
+  <joint name="furn_68_j" type="fixed"><parent link="map"/><child link="furn_68"/><origin xyz="0.0000 6.7800 0.7600" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_69"><color rgba="0.32 0.32 0.34 1.00"/></material>
+  <link name="furn_69"><visual><geometry><box size="1.8400 0.5000 0.6600"/></geometry><material name="mat_furn_69"/></visual></link>
+  <joint name="furn_69_j" type="fixed"><parent link="map"/><child link="furn_69"/><origin xyz="0.0000 6.7800 0.3500" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_70"><color rgba="0.83 0.62 0.22 1.00"/></material>
+  <link name="furn_70"><visual><geometry><box size="1.9400 0.0550 0.0600"/></geometry><material name="mat_furn_70"/></visual></link>
+  <joint name="furn_70_j" type="fixed"><parent link="map"/><child link="furn_70"/><origin xyz="0.0000 7.0700 0.7900" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_71"><color rgba="0.94 0.91 0.82 1.00"/></material>
+  <link name="furn_71"><visual><geometry><box size="0.5800 1.7500 0.0450"/></geometry><material name="mat_furn_71"/></visual></link>
+  <joint name="furn_71_j" type="fixed"><parent link="map"/><child link="furn_71"/><origin xyz="0.5600 5.6200 0.7600" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_72"><color rgba="0.32 0.32 0.34 1.00"/></material>
+  <link name="furn_72"><visual><geometry><box size="0.5000 1.6700 0.6600"/></geometry><material name="mat_furn_72"/></visual></link>
+  <joint name="furn_72_j" type="fixed"><parent link="map"/><child link="furn_72"/><origin xyz="0.5600 5.6200 0.3500" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_73"><color rgba="0.83 0.62 0.22 1.00"/></material>
+  <link name="furn_73"><visual><geometry><box size="0.6000 0.0550 0.0600"/></geometry><material name="mat_furn_73"/></visual></link>
+  <joint name="furn_73_j" type="fixed"><parent link="map"/><child link="furn_73"/><origin xyz="0.5600 6.4950 0.7900" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_74"><color rgba="0.03 0.04 0.04 1.00"/></material>
+  <link name="furn_74"><visual><geometry><box size="0.5800 0.0550 0.3400"/></geometry><material name="mat_furn_74"/></visual></link>
+  <joint name="furn_74_j" type="fixed"><parent link="map"/><child link="furn_74"/><origin xyz="-0.3500 6.6500 1.0500" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_75"><color rgba="0.08 0.08 0.09 1.00"/></material>
+  <link name="furn_75"><visual><geometry><box size="0.0600 0.0450 0.2800"/></geometry><material name="mat_furn_75"/></visual></link>
+  <joint name="furn_75_j" type="fixed"><parent link="map"/><child link="furn_75"/><origin xyz="-0.3500 6.6500 0.8600" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_76"><color rgba="0.08 0.08 0.09 1.00"/></material>
+  <link name="furn_76"><visual><geometry><box size="0.2600 0.1600 0.0250"/></geometry><material name="mat_furn_76"/></visual></link>
+  <joint name="furn_76_j" type="fixed"><parent link="map"/><child link="furn_76"/><origin xyz="-0.3500 6.6500 0.7200" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_77"><color rgba="0.03 0.04 0.04 1.00"/></material>
+  <link name="furn_77"><visual><geometry><box size="0.5800 0.0550 0.3400"/></geometry><material name="mat_furn_77"/></visual></link>
+  <joint name="furn_77_j" type="fixed"><parent link="map"/><child link="furn_77"/><origin xyz="0.4700 5.6200 1.0500" rpy="0 0 -1.5708"/></joint>
+  <material name="mat_furn_78"><color rgba="0.08 0.08 0.09 1.00"/></material>
+  <link name="furn_78"><visual><geometry><box size="0.0600 0.0450 0.2800"/></geometry><material name="mat_furn_78"/></visual></link>
+  <joint name="furn_78_j" type="fixed"><parent link="map"/><child link="furn_78"/><origin xyz="0.4700 5.6200 0.8600" rpy="0 0 -1.5708"/></joint>
+  <material name="mat_furn_79"><color rgba="0.08 0.08 0.09 1.00"/></material>
+  <link name="furn_79"><visual><geometry><box size="0.2600 0.1600 0.0250"/></geometry><material name="mat_furn_79"/></visual></link>
+  <joint name="furn_79_j" type="fixed"><parent link="map"/><child link="furn_79"/><origin xyz="0.4700 5.6200 0.7200" rpy="0 0 -1.5708"/></joint>
+  <material name="mat_furn_80"><color rgba="0.03 0.03 0.03 1.00"/></material>
+  <link name="furn_80"><visual><geometry><box size="0.3400 0.1300 0.0180"/></geometry><material name="mat_furn_80"/></visual></link>
+  <joint name="furn_80_j" type="fixed"><parent link="map"/><child link="furn_80"/><origin xyz="-0.3500 6.4800 0.7950" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_81"><color rgba="0.03 0.03 0.03 1.00"/></material>
+  <link name="furn_81"><visual><geometry><box size="0.3400 0.1300 0.0180"/></geometry><material name="mat_furn_81"/></visual></link>
+  <joint name="furn_81_j" type="fixed"><parent link="map"/><child link="furn_81"/><origin xyz="0.3500 5.6200 0.7950" rpy="0 0 -1.5708"/></joint>
+  <material name="mat_furn_82"><color rgba="0.08 0.08 0.09 1.00"/></material>
+  <link name="furn_82"><visual><geometry><box size="0.4600 0.4400 0.0800"/></geometry><material name="mat_furn_82"/></visual></link>
+  <joint name="furn_82_j" type="fixed"><parent link="map"/><child link="furn_82"/><origin xyz="-0.3500 6.2000 0.4600" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_83"><color rgba="0.08 0.08 0.09 1.00"/></material>
+  <link name="furn_83"><visual><geometry><box size="0.4600 0.0600 0.5800"/></geometry><material name="mat_furn_83"/></visual></link>
+  <joint name="furn_83_j" type="fixed"><parent link="map"/><child link="furn_83"/><origin xyz="-0.3500 6.4300 0.7500" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_84"><color rgba="0.05 0.05 0.06 1.00"/></material>
+  <link name="furn_84"><visual><geometry><box size="0.5200 0.4800 0.0550"/></geometry><material name="mat_furn_84"/></visual></link>
+  <joint name="furn_84_j" type="fixed"><parent link="map"/><child link="furn_84"/><origin xyz="-0.3500 6.1500 0.0800" rpy="0 0 3.1416"/></joint>
+  <material name="mat_furn_85"><color rgba="0.08 0.08 0.09 1.00"/></material>
+  <link name="furn_85"><visual><geometry><box size="0.4600 0.4400 0.0800"/></geometry><material name="mat_furn_85"/></visual></link>
+  <joint name="furn_85_j" type="fixed"><parent link="map"/><child link="furn_85"/><origin xyz="0.0200 5.4500 0.4600" rpy="0 0 -1.5708"/></joint>
+  <material name="mat_furn_86"><color rgba="0.08 0.08 0.09 1.00"/></material>
+  <link name="furn_86"><visual><geometry><box size="0.4600 0.0600 0.5800"/></geometry><material name="mat_furn_86"/></visual></link>
+  <joint name="furn_86_j" type="fixed"><parent link="map"/><child link="furn_86"/><origin xyz="0.0200 5.6800 0.7500" rpy="0 0 -1.5708"/></joint>
+  <material name="mat_furn_87"><color rgba="0.05 0.05 0.06 1.00"/></material>
+  <link name="furn_87"><visual><geometry><box size="0.5200 0.4800 0.0550"/></geometry><material name="mat_furn_87"/></visual></link>
+  <joint name="furn_87_j" type="fixed"><parent link="map"/><child link="furn_87"/><origin xyz="0.0200 5.4000 0.0800" rpy="0 0 -1.5708"/></joint>
+  <material name="mat_furn_88"><color rgba="0.02 0.02 0.03 1.00"/></material>
+  <link name="furn_88"><visual><geometry><box size="0.2400 0.4600 0.6400"/></geometry><material name="mat_furn_88"/></visual></link>
+  <joint name="furn_88_j" type="fixed"><parent link="map"/><child link="furn_88"/><origin xyz="0.7800 5.1500 0.3400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_89"><color rgba="0.02 0.02 0.03 1.00"/></material>
+  <link name="furn_89"><visual><geometry><box size="0.5200 0.3400 0.1600"/></geometry><material name="mat_furn_89"/></visual></link>
+  <joint name="furn_89_j" type="fixed"><parent link="map"/><child link="furn_89"/><origin xyz="0.4500 6.9500 0.8400" rpy="0 0 0"/></joint>
+  <material name="mat_furn_90"><color rgba="0.88 0.88 0.86 1.00"/></material>
+  <link name="furn_90"><visual><geometry><cylinder radius="0.1900" length="2.7000"/></geometry><material name="mat_furn_90"/></visual></link>
+  <joint name="furn_90_j" type="fixed"><parent link="map"/><child link="furn_90"/><origin xyz="-1.8000 -1.0000 1.3500" rpy="0 0 0"/></joint>
+  <material name="mat_furn_91"><color rgba="0.88 0.88 0.86 1.00"/></material>
+  <link name="furn_91"><visual><geometry><cylinder radius="0.1900" length="2.7000"/></geometry><material name="mat_furn_91"/></visual></link>
+  <joint name="furn_91_j" type="fixed"><parent link="map"/><child link="furn_91"/><origin xyz="-1.2000 7.0000 1.3500" rpy="0 0 0"/></joint>
+  <material name="mat_furn_92"><color rgba="0.21 0.20 0.20 1.00"/></material>
+  <link name="furn_92"><visual><geometry><box size="0.1600 1.1000 0.4800"/></geometry><material name="mat_furn_92"/></visual></link>
+  <joint name="furn_92_j" type="fixed"><parent link="map"/><child link="furn_92"/><origin xyz="-5.0800 0.5500 0.2700" rpy="0 0 0"/></joint>
+  <material name="mat_furn_93"><color rgba="0.21 0.20 0.20 1.00"/></material>
+  <link name="furn_93"><visual><geometry><box size="0.1600 1.1000 0.4800"/></geometry><material name="mat_furn_93"/></visual></link>
+  <joint name="furn_93_j" type="fixed"><parent link="map"/><child link="furn_93"/><origin xyz="-5.0800 2.3500 0.2700" rpy="0 0 0"/></joint>
+  <material name="mat_furn_94"><color rgba="0.21 0.20 0.20 1.00"/></material>
+  <link name="furn_94"><visual><geometry><box size="0.1600 1.1000 0.4800"/></geometry><material name="mat_furn_94"/></visual></link>
+  <joint name="furn_94_j" type="fixed"><parent link="map"/><child link="furn_94"/><origin xyz="-5.0800 4.2000 0.2700" rpy="0 0 0"/></joint>
+  <material name="mat_furn_95"><color rgba="0.08 0.09 0.10 0.65"/></material>
+  <link name="furn_95"><visual><geometry><box size="0.0500 4.9000 0.3500"/></geometry><material name="mat_furn_95"/></visual></link>
+  <joint name="furn_95_j" type="fixed"><parent link="map"/><child link="furn_95"/><origin xyz="-5.2200 2.4500 1.3000" rpy="0 0 0"/></joint>
+</robot>
