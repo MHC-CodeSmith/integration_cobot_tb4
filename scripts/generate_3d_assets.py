@@ -338,13 +338,14 @@ def furniture_urdf(out_path, anchor_x=-0.338, anchor_y=1.106):
     for dy in [-0.82, -0.55, -0.28, 0.0, 0.28, 0.55, 0.82]:
         box(0.13, 0.10, 0.38, fcx - 0.42, fcy + dy, 1.15, 0.08, 0.28, 0.78)
 
-    # TV/compressor beside the shorter factory, between it and the L-desk.
-    screen_x, screen_y = 0.42, 3.50
+    # TV near the workstation table; compressor/cylinder moved inward so the
+    # two visual hints no longer overlap in RViz.
+    screen_x, screen_y = -0.10, 4.20
     box(0.10, 1.20, 0.75, screen_x, screen_y, 1.12, 0.03, 0.03, 0.035)
     box(0.08, 0.10, 1.65, screen_x, screen_y, 0.84, 0.86, 0.86, 0.82)
     box(0.62, 0.76, 0.045, screen_x, screen_y, 0.04, 0.86, 0.86, 0.82)
-    cyl(0.23, 0.62, 0.60, 3.50, 0.32, 0.92, 0.82, 0.45, rpy="0 1.5708 0")
-    box(0.36, 0.30, 0.34, 0.30, 3.50, 0.58, 0.25, 0.25, 0.25)
+    cyl(0.23, 0.62, -0.30, 3.48, 0.32, 0.92, 0.82, 0.45, rpy="0 1.5708 0")
+    box(0.36, 0.30, 0.34, -0.42, 3.48, 0.58, 0.25, 0.25, 0.25)
 
     # Tables and boards on the left wall: one low, one wider near the top wall.
     desk(-4.48, 1.20, sx=0.72, sy=0.90, yaw=3.1416)
