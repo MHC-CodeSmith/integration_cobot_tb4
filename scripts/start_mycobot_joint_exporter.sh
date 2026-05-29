@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MYCOBOT_CONTAINER="${MYCOBOT_CONTAINER:-mycobot_ros2}"
-SOURCE_TOPIC="${MYCOBOT_JOINT_SOURCE_TOPIC:-/joint_states}"
+SOURCE_TOPIC="${MYCOBOT_JOINT_SOURCE_TOPIC:-/joint_states_raw}"
 PORT="${MYCOBOT_JOINT_UDP_PORT:-30242}"
 EXPORTER_IN_CONTAINER="/tmp/mycobot_joint_udp_exporter.py"
 EXPORTER_LOG_IN_CONTAINER="/tmp/mycobot_joint_udp_exporter.log"
@@ -106,8 +106,9 @@ start_exporter() {
     source /opt/ros/galactic/setup.bash
     source /root/custom_ws/install/setup.bash
     export ROS_DOMAIN_ID=42
-    export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
-    export CYCLONEDDS_URI=/root/custom_ws/cyclonedds_pc.xml
+    export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+    export FASTDDS_BUILTIN_TRANSPORTS=UDPv4
+    unset CYCLONEDDS_URI
     export PYTHONUNBUFFERED=1
     python3 ${EXPORTER_IN_CONTAINER} \
       --topic ${SOURCE_TOPIC} \
